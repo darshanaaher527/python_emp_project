@@ -54,7 +54,7 @@ def show_sal():
         messagebox.showinfo('info,All fields are compulsory')
     else:
         conn=pymysql.connect(user='root',host='localhost',password='Darshu@9',database='emp_project')
-        qur=f'SELECT emp_name emp_salary FROM emp WHERE emp_id="{s}"'
+        qur=f'SELECT emp_name ,emp_salary FROM emp WHERE emp_id="{s}"'
         mycur=conn.cursor()
         mycur.execute(qur)
         tup4=mycur.fetchone()
